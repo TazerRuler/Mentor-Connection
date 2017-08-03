@@ -1,15 +1,13 @@
-//https://www.googleapis.com/books/v1/volumes?q=harry+potter&callback=handleResponse
-
 
 import React, {Component} from 'react';
 
 const API = 'AIzaSyDZOZjelGwA5AVXp62NFfhM6JXKDlzk-7A'
-const q = 'javascript'
-// const result = 20;
+const q = 'charlie'
+const results = '3'
 
 //https://www.googleapis.com/books/v1/volumes?q=flowers&filter=free-ebooks&key=yourAPIKey
 
-var finalURL = `https://www.googleapis.com/books/v1/volumes?q=${q}&filter=free-ebooks&key=${API}`
+var finalURL = `https://www.googleapis.com/books/v1/volumes?q=${q}+intitle&orderBy=newest&filter=free-ebooks&maxResults=${results}&key=${API}`
 
 class Books extends Component {
 
@@ -26,7 +24,8 @@ clicked(){
       .then((response) => response.json())
       .then((responseJson) => {
         // console.log(responseJson);
-        const resultBooks = responseJson.items.map(obj => "https://www.youtube.com/embed/"+obj.id.selfLink);
+        const resultBooks = responseJson.items
+        console.log(resultBooks)
         this.setState({resultBooks});
       })
       .catch((error) => {
