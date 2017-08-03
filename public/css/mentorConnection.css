@@ -4,15 +4,45 @@
  */
 
 /* Global Styles */
+.App {
+  text-align: center;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.youtube{
+  border: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
 
 html,
 body {
     width: 100%;
     height: 100%;
+    background-color: #2980b9;
 }
 
 body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+button {
+    margin: 20px;
+}
+
+.h2text {
+    font-weight: bold;
+    font-size: 50px;
+    color: white;
+    margin-top: 50px;
+}
+
+.h4text {
+    color: white;
+    margin-bottom: 30px;
 }
 
 .text-vertical-center {
@@ -35,29 +65,34 @@ body {
 /* Custom Button Styles */
 
 .btn-dark {
-    border-radius: 0;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border-style: none;
     color: #fff;
-    background-color: rgba(0,0,0,0.4);
+    background-color: #34495e;
+    margin: 10px;
 }
 
 .btn-dark:hover,
 .btn-dark:focus,
 .btn-dark:active {
     color: #fff;
-    background-color: rgba(0,0,0,0.7);
+    background-color: #2c3e50;
+    box-shadow: 2px 2px 5px #202020;
 }
 
 .btn-light {
-    border-radius: 0;
+    border-radius: 20px;
+    padding: 10px 20px;
     color: #333;
-    background-color: rgb(255,255,255);
+    background-color: #95a5a6;
 }
 
 .btn-light:hover,
 .btn-light:focus,
 .btn-light:active {
     color: #333;
-    background-color: rgba(255,255,255,0.8);
+    background-color: #7f8c8d;
 }
 
 /* Custom Horizontal Rule */
@@ -188,7 +223,7 @@ hr.small {
     width: 100%;
     height: 100%;
     color: #fff;
-    background: url(../img/be-a-mentor.jpg) no-repeat center center scroll;
+    background: url(../images/be-a-mentor.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
