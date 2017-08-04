@@ -12,17 +12,26 @@
   font-size: large;
 }
 
+.clip-circle {
+  clip-path: circle(60px at center);
+  }
+
 .youtube{
   border: 10px;
   margin-top: 20px;
   width: 100%;
+  float: left;
+}
+
+.bgColor1 {
+    width: 100%;
+    background-color: #337AB7;
 }
 
 html,
 body {
     width: 100%;
     height: 100%;
-    background-color: #2980b9;
 }
 
 body {
@@ -32,13 +41,15 @@ body {
 .h2text {
     font-weight: bold;
     font-size: 50px;
-    color: #2c3e50;
+    color: #fff;
     margin-top: 50px;
 }
 
-.h4text {
-    color: #2c3e50;
+.text {
+    font-size: 20px;
+    color: #fff;
     margin-bottom: 30px;
+    margin-top: 20px;
 }
 
 .text-vertical-center {
@@ -56,6 +67,7 @@ body {
 
 .img-style {
     width: 100%;
+    background-color: #2980b9;
 }
 
 /* Custom Button Styles */
@@ -72,7 +84,7 @@ body {
 .btn-dark:hover,
 .btn-dark:focus,
 .btn-dark:active {
-    color: #fff;
+    color: #fff !important;
     background-color: #2c3e50;
     box-shadow: 2px 2px 5px #202020;
 }
