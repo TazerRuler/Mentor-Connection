@@ -28,6 +28,7 @@
     background-color: #337AB7;
 }
 
+
 html,
 body {
     width: 100%;
@@ -106,7 +107,7 @@ body {
 /* Custom Horizontal Rule */
 
 hr.small {
-    max-width: 100px;
+    max-width: 500px;
 }
 
 /* Side Menu */
