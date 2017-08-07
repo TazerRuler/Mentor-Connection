@@ -8,6 +8,12 @@
     <link href="./font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="./css/mentorConnection.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- jQuery -->
+    <script src="./js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="./js/bootstrap.min.js"></script>
     <!--
       Notice the use of %PUBLIC_URL% in the tag above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -17,11 +23,13 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Mentor Connection</title>
   </head>
   <body>
 
-     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+  <div id="root"></div>
+
+   <!--   <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-dark btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
@@ -44,43 +52,42 @@
                 <a href="#contact" onclick=$("#menu-close").click();>Contact</a>
             </li>
         </ul>
-    </nav>
+    </nav> -->
 
     <!-- Header -->
-    <header id="top" class="header">
+    <!-- <header id="top" class="header">
         <div class="text-vertical-center">
             <br>
-            <img src="./images/Mentor.jpg" class="img-style" alt="" usemap="#image-map">
+            <img src="./images/Mentor.jpg" class="img-style" alt="" usemap="#image-map"> -->
             <!-- <map name="image-map" >
-
                 <area target="" alt="" title="" href="" coords="155,658,551,573" shape="rect">
                 <area target="" alt="" title="" href="" coords="735,555,1098,642" shape="rect">
                 <area target="" alt="" title="" href="" coords="353,390,83" shape="circle">
                 <area target="" alt="" title="" href="" coords="894,386,78" shape="circle">
             </map> -->
-
+<!-- 
         </div>
-    </header>
+    </header> -->
 
     <!-- About -->
-    <section id="about" class="about">
+  <!--   <section id="about" class="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Mentor Connection is the perfect place for you to learn a new web development language.</h2>
                     <p class="lead">Full of tutorials and mentors that can help you on your way to becoming the ultimate web developer.</p>
                 </div>
-            </div>
+            </div> -->
             <!-- /.row -->
-        </div>
+        <!-- </div> -->
         <!-- /.container -->
-    </section>
+<!--     </section> -->
 
     
 
     <!-- Services -->
     <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-    <section id="services" class="services bg-primary">
+<!--     <section id="services" class="services bg-primary">
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-10 col-lg-offset-1">
@@ -89,7 +96,7 @@
                     <div class="row">
                         <div class="col-md-3 col-sm-6">
                             <div class="service-item">
-                                <img src="./images/mentor1.jpg" class="img-thumbnail img-responsive clip-circle">
+                                <img src="./images/avatar1.jpg" class="img-thumbnail img-responsive img-size">
 
                                 <h4>
                                     <strong>Service Name</strong>
@@ -100,9 +107,9 @@
                         </div>
                         <div class="col-md-3 col-sm-6">
                             <div class="service-item">
-                                <img src="./images/mentor1.jpg" class="
+                                <img src="./images/avatar1.jpg" class="
                                 img-thumbnail
-                                img-responsive clip-circle">
+                                img-responsive img-size">
                                 <h4>
                                     <strong>Service Name</strong>
                                 </h4>
@@ -112,7 +119,7 @@
                         </div>
                         <div class="col-md-3 col-sm-6">
                             <div class="service-item">
-                                <img src="./images/mentor1.jpg" class="img-thumbnail img-responsive clip-circle">
+                                <img src="./images/avatar1.jpg" class="img-thumbnail img-responsive img-size">
                                 <h4>
                                     <strong>Service Name</strong>
                                 </h4>
@@ -122,7 +129,7 @@
                         </div>
                         <div class="col-md-3 col-sm-6">
                             <div class="service-item">
-                                <img src="./images/mentor1.jpg" class="img-thumbnail img-responsive clip-circle">
+                                <img src="./images/avatar1.jpg" class="img-thumbnail img-responsive img-size">
                                 <h4>
                                     <strong>Service Name</strong>
                                 </h4>
@@ -130,28 +137,29 @@
                                 <a href="#" class="btn btn-dark">Learn More</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- /.row (nested) -->
-                </div>
+               <!--  </div> -->
                 <!-- /.col-lg-10 -->
-            </div>
+           <!--  </div> -->
             <!-- /.row -->
-        </div>
+     <!--    </div> -->
         <!-- /.container -->
-    </section>
+  <!--   </section>
 
 
 
-    <!-- Callout -->
-    <aside class="callout">
-        <div class="text-vertical-center">
-        </div>
-    </aside>
+    <div class="text-vertical-center">
+        <br>
+        <img src="./images/be-a-mentor.jpg" class="img-style" alt="be-a-mentor">
 
-     <div id="root"></div>
+    </div>
+
+
+     <div id="root"></div> -->
 
     <!-- Portfolio -->
-    <section id="portfolio" class="portfolio">
+ <!--    <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
@@ -187,21 +195,21 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- /.row (nested) -->
-                    <a href="#" class="btn btn-dark">View More Items</a>
-                </div>
+                   <!--  <a href="#" class="btn btn-dark">View More Items</a>
+                </div> -->
                 <!-- /.col-lg-10 -->
-            </div>
+            <!-- </div> -->
             <!-- /.row -->
-        </div>
+       <!--  </div> -->
         <!-- /.container -->
-    </section>
+<!--     </section> -->
 
 
 
     <!-- Call to Action -->
-    <aside class="call-to-action bg-primary">
+ <!--    <aside class="call-to-action bg-primary">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -211,19 +219,19 @@
                 </div>
             </div>
         </div>
-    </aside>
+    </aside> -->
 
     <!-- Map -->
-    <section id="contact" class="map">
+ <!--    <section id="contact" class="map">
         <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Mentor Connection,+Inc.,+320+East+9th+Street,+Charlotte,+NC&amp;aq=0&amp;oq=mentor&amp;sll=35.228354,-80.835211&amp;ie=UTF8&amp;hq=Mentor Connection,+Inc.,+320+East+9th+Street,+Charlotte,+NC&amp;t=m&amp;z=28202&amp;iwloc=A&amp;output=embed"></iframe>
         <br />
         <small>
             <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Mentor Connection,+Inc.,+320+East+9th+Street,+Charlotte,+NC&amp;aq=0&amp;oq=mentor&amp;sll=35.228354,-80.835211&amp;ie=UTF8&amp;hq=Mentor Connection,+Inc.,+320+East+9th+Street,+Charlotte,+NC&amp;t=m&amp;z=28202&amp;iwloc=A"></a>
         </small>
-    </section>
+    </section> -->
 
     <!-- Footer -->
-    <footer>
+<!--     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
@@ -254,7 +262,7 @@
             </div>
         </div>
         <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
-    </footer>
+    </footer> -->
 
     <!-- jQuery -->
     <script src="./js/jquery.js"></script>
@@ -265,75 +273,75 @@
     <!-- Custom Theme JavaScript -->
     <script>
     // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-    // Scrolls to the selected menu item on the page
-    $(function() {
-        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-    });
-    //#to-top button appears after scrolling
-    var fixed = false;
-    $(document).scroll(function() {
-        if ($(this).scrollTop() > 250) {
-            if (!fixed) {
-                fixed = true;
-                // $('#to-top').css({position:'fixed', display:'block'});
-                $('#to-top').show("slow", function() {
-                    $('#to-top').css({
-                        position: 'fixed',
-                        display: 'block'
-                    });
-                });
-            }
-        } else {
-            if (fixed) {
-                fixed = false;
-                $('#to-top').hide("slow", function() {
-                    $('#to-top').css({
-                        display: 'none'
-                    });
-                });
-            }
-        }
-    });
-    // Disable Google Maps scrolling
-    // See http://stackoverflow.com/a/25904582/1607849
-    // Disable scroll zooming and bind back the click event
-    var onMapMouseleaveHandler = function(event) {
-        var that = $(this);
-        that.on('click', onMapClickHandler);
-        that.off('mouseleave', onMapMouseleaveHandler);
-        that.find('iframe').css("pointer-events", "none");
-    }
-    var onMapClickHandler = function(event) {
-            var that = $(this);
-            // Disable the click handler until the user leaves the map area
-            that.off('click', onMapClickHandler);
-            // Enable scrolling zoom
-            that.find('iframe').css("pointer-events", "auto");
-            // Handle the mouse leave event
-            that.on('mouseleave', onMapMouseleaveHandler);
-        }
-        // Enable map zooming with mouse scroll when the user clicks the map
-    $('.map').on('click', onMapClickHandler);
+    // $("#menu-close").click(function(e) {
+    //     e.preventDefault();
+    //     $("#sidebar-wrapper").toggleClass("active");
+    // });
+    // // Opens the sidebar menu
+    // $("#menu-toggle").click(function(e) {
+    //     e.preventDefault();
+    //     $("#sidebar-wrapper").toggleClass("active");
+    // });
+    // // Scrolls to the selected menu item on the page
+    // $(function() {
+    //     $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+    //         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+    //             var target = $(this.hash);
+    //             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    //             if (target.length) {
+    //                 $('html,body').animate({
+    //                     scrollTop: target.offset().top
+    //                 }, 1000);
+    //                 return false;
+    //             }
+    //         }
+    //     });
+    // });
+    // //#to-top button appears after scrolling
+    // var fixed = false;
+    // $(document).scroll(function() {
+    //     if ($(this).scrollTop() > 250) {
+    //         if (!fixed) {
+    //             fixed = true;
+    //             // $('#to-top').css({position:'fixed', display:'block'});
+    //             $('#to-top').show("slow", function() {
+    //                 $('#to-top').css({
+    //                     position: 'fixed',
+    //                     display: 'block'
+    //                 });
+    //             });
+    //         }
+    //     } else {
+    //         if (fixed) {
+    //             fixed = false;
+    //             $('#to-top').hide("slow", function() {
+    //                 $('#to-top').css({
+    //                     display: 'none'
+    //                 });
+    //             });
+    //         }
+    //     }
+    // });
+    // // Disable Google Maps scrolling
+    // // See http://stackoverflow.com/a/25904582/1607849
+    // // Disable scroll zooming and bind back the click event
+    // var onMapMouseleaveHandler = function(event) {
+    //     var that = $(this);
+    //     that.on('click', onMapClickHandler);
+    //     that.off('mouseleave', onMapMouseleaveHandler);
+    //     that.find('iframe').css("pointer-events", "none");
+    // }
+    // var onMapClickHandler = function(event) {
+    //         var that = $(this);
+    //         // Disable the click handler until the user leaves the map area
+    //         that.off('click', onMapClickHandler);
+    //         // Enable scrolling zoom
+    //         that.find('iframe').css("pointer-events", "auto");
+    //         // Handle the mouse leave event
+    //         that.on('mouseleave', onMapMouseleaveHandler);
+    //     }
+    //     // Enable map zooming with mouse scroll when the user clicks the map
+    // $('.map').on('click', onMapClickHandler);
     </script>
 
 </body>
@@ -343,10 +351,8 @@
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
-
       You can add webfonts, meta tags, or analytics to this file.
       The build step will place the bundled scripts into the <body> tag.
-
       To begin the development, run `npm start`.
       To create a production bundle, use `npm run build`.
     -->

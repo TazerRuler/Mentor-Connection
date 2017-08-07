@@ -1,24 +1,19 @@
-import React, { Component } from 'react';
-import '../../../public/css/mentorConnection.css';
-import '../../../public/css/bootstrap.css';
+import React from 'react';
+import {Link} from "react-router-dom";
 
-
-// set data
-
-class Navbar extends Component {
-  render() {
+const Navbar = (props) => {
     return (
         <nav className="navbar navbar-default">
-          <div className="container">
-            <div className="navbar-header">
-              <ul className="nav navbar-nav">
-                <li><a href="#">Home</a></li>
-              </ul>
+            <div className="container">
+                <div className="navbar-header">
+                    <ul className="nav navbar-nav">
+                        <li><Link to="/home">Home</Link></li>
+                        <li><Link to="/mentor">Mentor</Link></li>
+                    </ul>
+                </div>
             </div>
-          </div>
         </nav>
-        );
-  }
-}
+    );
+};
 
-export default Navbar;
+export default Navbar
