@@ -1,26 +1,25 @@
+var mongoose = require("mongoose");
 
-module.exports = function(sequelize, DataTypes){
-	
-	var mentor = sequelize.define("mentor", {
-		FName:{
-			type: DataTypes.STRING,
-			allowNull: false
-		},
-		LName:{
-			type: DataTypes.STRING,
-			allowNull: false
-		},
-		city:{
-			type: DataTypes.STRING,
-			allowNull: false	
-			},
-		state:{
-			type: DataTypes.STRING,
-			allowNull: false
-		}
-			
-	});
+var Schema = mongoose.Schema;
 
-	return mentor;
-};
-		
+var Mentor = new Schema({
+  FName:{
+    type: String
+  },
+  LName:{
+    type:String
+  },
+  city:{
+    type:String
+  },
+  state:{
+    type:String
+  },
+  email:{
+    type:String
+  }
+});
+
+var Mentor = mongoose.model("Mentor", Mentor);
+
+module.exports = Mentor;

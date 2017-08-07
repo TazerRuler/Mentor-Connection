@@ -16,19 +16,27 @@
   width: 70%;
   }
 
-.avatarimg {
+.avatarImg {
     float:left; 
     height:100%; 
     margin-right: 10px;
 }
 
-.menteelist{
+.mentorList{
     text-align: left;
 }
-.menteepanel {
+.mentorPanel {
     height: 80px;  
 }
 
+.mentorPanelHead { 
+    background-color: #337AB7
+}
+
+.mentorPanelTitle {
+    color: #fff;
+    font-weight: bold;
+}
 
 @media(max-width:1000px) {
     .img-size {
@@ -143,8 +151,8 @@ body {
 
 /* Custom Horizontal Rule */
 
-hr.small {
-    max-width: 500px;
+hr {
+    margin: 0px;
 }
 
 /* Side Menu */
