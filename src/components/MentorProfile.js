@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom"; 
 import '../../public/css/bootstrap.css';
 import '../../public/css/mentorConnection.css';
 
@@ -71,6 +72,7 @@ class MentorProfile extends React.Component {
 						      	<div>
 						          <img src={Mentor1} className="img-thumbnail img-responsive" alt="mentor" />
 						          <h3>Welcome Back User</h3>
+						          <Link to="/mentor-form">edit profile</Link>
 						        </div>
 
 						    </div>

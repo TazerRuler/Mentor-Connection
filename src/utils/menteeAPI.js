@@ -1,15 +1,15 @@
 import axios from "axios";
 
 const menteeAPI = {
-  // Retrieves all quotes from the db
+  // Retrieves all mentees from the db
   getMentor: function() {
     return axios.get("/api/mentee");
   },
-  // Saves a new quote to the db
+  // Saves a new mentee to the db
   saveMentee: function(text) {
     return axios.post("/api/mentee", { text });
   },
-  // Deletes a quote from the db
+  // Deletes a mentee from the db
   deleteMentor: function(id) {
     return axios.delete(`/api/mentee/${id}`);
   },
