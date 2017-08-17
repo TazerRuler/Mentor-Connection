@@ -1,19 +1,21 @@
 
 // absolute imports
 import React from "react";
+import { Link } from "react-router-dom";
+import Modal from 'react-modal';
+import Auth0Lock from 'auth0-lock';
+import Youtube from './Youtube';
 import Mentor from '../../public/images/Mentor.jpg'
+import beMentor from '../../public/images/be-a-mentor.jpg'
 import '../../public/css/mentorConnection.css';
 import '../../public/css/bootstrap.css';
 import '../../public/font-awesome/css/font-awesome.min.css';
-import Modal from 'react-modal';
-import Auth0Lock from 'auth0-lock';
 import {Grid, Row, Col} from 'react-bootstrap';
-
-
-// components
 import MenteeModal from './MenteeModal';
+import MentorModal from './MentorModal';
+import UserAuth from './UserAuth';
 
-class Main extends React.Component {
+class Landing extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -32,41 +34,11 @@ class Main extends React.Component {
     render() {
         return (
             <div>
-                <a id="menu-toggle" href="#" className="btn btn-dark btn-lg toggle"><i className="fa fa-bars"></i></a>
-                <nav id="sidebar-wrapper">
-                    <ul className="sidebar-nav">
-                        <a id="menu-close" href="#" className="btn btn-light btn-lg pull-right toggle"><i className="fa fa-times"></i></a>
-                        <li className="sidebar-brand">
-                            <a href="#top">Mentor Menu</a>
-                        </li>
-                        <li>
-                            <a href="#top">Home</a>
-                        </li>
-                        <li>
-                            <a href="#about">About</a>
-                        </li>
-                        <li>
-                            <a href="#services">Services</a>
-                        </li>
-                        <li>
-                            <a href="#portfolio">Portfolio</a>
-                        </li>
-                        <li>
-                            <a href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
 
                 <header id="top" className="header">
                     <div className="text-vertical-center">
                         <br/>
-                        <img src={Mentor} className="img-style" alt="mentor" />
-                        <map name="image-map" >
-                            <area target="" alt="" title="" href="" coords="155,658,551,573" shape="rect"/>
-                            <area target="" alt="" title="" href="" coords="735,555,1098,642" shape="rect"/>
-                            <area target="" alt="" title="" href="" coords="353,390,83" shape="circle"/>
-                            <area target="" alt="" title="" href="" coords="894,386,78" shape="circle"/>
-                        </map>
+                        <img src={Mentor} className="img-style" alt={"Mentor"} />
                        <button className="mentor-img-left" onClick={this.toggleModal} />
                        <button className="mentor-img-right" onClick={this.toggleModal} />
                     </div>
@@ -100,7 +72,7 @@ class Main extends React.Component {
                                                 <strong>Service Name</strong>
                                             </h4>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                            <a href="#" className="btn btn-light">Learn More</a>
+                                            <a href="#" className="btn btn-dark">Learn More</a>
                                         </div>
                                     </div>
                                     <div className="col-md-3 col-sm-6">
@@ -113,7 +85,7 @@ class Main extends React.Component {
                                                 <strong>Service Name</strong>
                                             </h4>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                            <a href="#" className="btn btn-light">Learn More</a>
+                                            <a href="#" className="btn btn-dark">Learn More</a>
                                         </div>
                                     </div>
                                     <div className="col-md-3 col-sm-6">
@@ -126,7 +98,7 @@ class Main extends React.Component {
                                                 <strong>Service Name</strong>
                                             </h4>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                            <a href="#" className="btn btn-light">Learn More</a>
+                                            <a href="#" className="btn btn-dark">Learn More</a>
                                         </div>
                                     </div>
                                     <div className="col-md-3 col-sm-6">
@@ -139,7 +111,7 @@ class Main extends React.Component {
                                                 <strong>Service Name</strong>
                                             </h4>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                            <a href="#" className="btn btn-light">Learn More</a>
+                                            <a href="#" className="btn btn-dark">Learn More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -148,10 +120,9 @@ class Main extends React.Component {
                     </div>
                 </section>
 
-                <aside className="callout">
-                    <div className="text-vertical-center">
-                    </div>
-                </aside>
+                <div>
+                    <img src={beMentor} className="img-style" alt={"beMentor"} />
+                </div>
 
                 
 
@@ -159,9 +130,7 @@ class Main extends React.Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12 text-center">
-                                <h3>The buttons below are impossible to resist.</h3>
-                                <a href="#" className="btn btn-lg btn-light">Click Me!</a>
-                                <a href="#" className="btn btn-lg btn-dark">Look at Me!</a>
+                                <Youtube />
                             </div>
                         </div>
                     </div>
@@ -214,9 +183,11 @@ class Main extends React.Component {
                     setAuth={this.props.setAuth}
                     isAutth={this.props.isAuthenticated} />
 
+               
+
             </div>
         );
     }
 }
 
-export default Main;
+export default Landing;

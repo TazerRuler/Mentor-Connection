@@ -6,7 +6,6 @@ import '../../public/css/mentorConnection.css';
 import Navbar from './common/Navbar';
 import Mentor1 from "../../public/images/mentor1.jpg";
 import Avatar1 from "../../public/images/avatar1.jpg";
-import menteeAPI from "../utils/menteeAPI"
 import InfiniteCalendar from 'react-infinite-calendar';
 import 'react-infinite-calendar/styles.css'; // only needs to be imported once
 
@@ -28,34 +27,15 @@ const styles = {
 },
 
 	mentorPanelHead: { 
-    backgroundColor: "#337AB7"
+    backgroundColor: "#448AFF"
 },
 
 	mentorPanelTitle: {
     color: "#fff",
-    fontWeight: "bold"
+    fontSize: 30
 }
 };
 class MentorProfile extends React.Component {
-
-	constructor(){
-		super();
-		this.state = {
-			mentees: []
-		}
-		this.getMentees = this.getMentees.bind(this);
-	}
-
-	componentDidMount(){
-		this.getMentees();
-	}
-
-	getMentees() {
-		menteeAPI.getMentees().then((res) => {
-			this.setState({mentees: res.data});
-		});
-	}
-
 
   	render() {
     	return (
@@ -71,7 +51,7 @@ class MentorProfile extends React.Component {
 
 						      	<div>
 						          <img src={Mentor1} className="img-thumbnail img-responsive" alt="mentor" />
-						          <h3>Welcome Back User</h3>
+						          <h1>Welcome Back User</h1>
 						          <Link to="/mentor-form">edit profile</Link>
 						        </div>
 
@@ -81,7 +61,7 @@ class MentorProfile extends React.Component {
 					    <div className="col-md-6">
 				        	<div className="panel panel-default">
 				          		<div className="panel-heading" style={styles.mentorPanelHead}>
-				            		<h2 className="panel-title" style={styles.mentorPanelTitle}>Mentee List</h2>
+				            		<h1 className="panel-title" style={styles.mentorPanelTitle}>Mentee List</h1>
 				          		</div>
 
 				          		<div className="panel-body mentorPanel">

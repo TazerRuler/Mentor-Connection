@@ -1,9 +1,9 @@
 import React from "react";
 // import {render} from "react-dom";
 // import { Route, Router } from "react-router";
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import Home from "../components/Home"
+
 import MentorProfile from "../components/MentorProfile"
 import MenteeProfile from "../components/MenteeProfile"
 import Landing from "../components/Landing"
@@ -15,9 +15,8 @@ const routes = (
 			<Router>
 				<Switch>
 					<Route exact path="/" component={Landing} />
-					<Route path="/home" component={Home} />
-					<Route path="/mentor" component={MentorProfile} />
-					<Route path="/mentee" component={MenteeProfile} />
+					<Route path="/mentor-profile" component={MentorProfile} />
+					<Route path="/mentee-profile" component={MenteeProfile} />
 					<Route path="/mentor-form" component={MentorForm} />
 					<Route path="/mentee-form" component={MenteeForm} />
 				</Switch>
@@ -26,3 +25,5 @@ const routes = (
 	
 
 export default routes;
+
+

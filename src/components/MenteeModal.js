@@ -1,11 +1,10 @@
 import React from 'react'; //import React, { Component } from 'react';//
-import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import Auth0Lock from 'auth0-lock';
 import {Grid, Row, Col} from 'react-bootstrap';
 import Header from './header';
 import Home from './home';
-import Landing from './Landing';
+
 
 
 class MenteeModal extends React.Component {      
@@ -95,8 +94,13 @@ class MenteeModal extends React.Component {
                         <br /><br />
                         <input type="submit" value="Submit Answers" />
                     </form>
+                </section>
+            </div>
+            )
+    }
 
-                    function submitAnswers() {
+/*
+    function submitAnswers() {
                         var total = 5;
                         var score = 0;
 
@@ -129,11 +133,7 @@ class MenteeModal extends React.Component {
                         alert('You scored '+score+' out of '+total);
 
                         return false;
-                    }
-                </section>
-            </div>
-            )
-    }  
+                    } */
         
 
     render(){

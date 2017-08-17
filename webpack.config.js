@@ -39,6 +39,10 @@ module.exports = {
             'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false'
         ]
       },
+      {
+        test: /\.json$/,
+        loader: 'babel-loader'
+      },
 
      {
         test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,

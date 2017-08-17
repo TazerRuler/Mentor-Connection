@@ -1,6 +1,17 @@
 import React, { Component } from "react";
 import API from "../../utils/mentorAPI";
 
+const styles = {
+  buttonStyle: {
+    float: "right",
+    marginTop: 10
+  },
+  formStyle: {
+    marginBottom: 60,
+    marginTop: 60
+  }
+};
+
 class MentorForm extends Component {
   constructor() {
     super();
@@ -51,15 +62,6 @@ class MentorForm extends Component {
   }
 }
 
-const styles = {
-  buttonStyle: {
-    float: "right",
-    marginTop: 10
-  },
-  formStyle: {
-    marginBottom: 60,
-    marginTop: 60
-  }
-};
+
 
 export default MentorForm;
