@@ -4,6 +4,9 @@ import Auth0Lock from 'auth0-lock';
 import {Grid, Row, Col} from 'react-bootstrap';
 import Header from './header';
 import Home from './home';
+import '../../public/css/mentorConnection.css';
+import '../../public/css/bootstrap.css';
+import '../../public/font-awesome/css/font-awesome.min.css';
 
 
 
@@ -34,7 +37,7 @@ class MenteeModal extends React.Component {
 
     rendernoAuth() {
         return(
-            <div>
+            <div className="text-center">
                 <Header onLoginClick={this.showLock.bind(this)} />
                 <Grid>
                     <Row>
@@ -43,10 +46,10 @@ class MenteeModal extends React.Component {
                         </Col>
                     </Row>
                 </Grid>
-                <button onClick={this.props.toggleModal}>Hide
+                <button className="btn btn-dark" onClick={this.props.toggleModal}>Hide
                 
                 </button> 
-                <button onClick={this.props.setAuth}>quiz
+                <button className="btn btn-dark" onClick={this.props.setAuth}>quiz
                 
                 </button> 
 

@@ -1,6 +1,9 @@
 import React from 'react'; //import React, { Component } from 'react';//
 import Modal from 'react-modal';
 import axios from 'axios';
+import '../../public/css/mentorConnection.css';
+import '../../public/css/bootstrap.css';
+import '../../public/font-awesome/css/font-awesome.min.css';
 
 // props: user type, auth type (sign in or sign up)
 class UserAuth extends React.Component {

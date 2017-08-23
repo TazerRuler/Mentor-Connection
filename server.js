@@ -9,7 +9,7 @@ var bluebird = require("bluebird");
 var routes = require("./routes/routes");
 
 
-var PORT = process.env.PORT || 8080; // Sets an initial port. We'll use this later in our listener
+var PORT = process.env.PORT || 3001; // Sets an initial port. We'll use this later in our listener
 
 // Create Instance of Express
 var app = express();
@@ -21,23 +21,22 @@ app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.text());
-app.use(bodyParser.json());
 app.use(express.static(__dirname + "/public"));
-app.use("/", routes);
+// app.use("/", routes);
 
 //-----------------------
 //MongoDB config
 
-mongoose.connect("mongodb://janettwalker:tminus987@ds157740.mlab.com:57740/mentor-connection");
-var db = mongoose.connection;
+// mongoose.connect("mongodb://janettwalker:tminus987@ds157740.mlab.com:57740/mentor-connection");
+// var db = mongoose.connection;
 
-db.on("error", function(err) {
-  console.log("Mongoose Error: ", err);
-});
+// db.on("error", function(err) {
+//   console.log("Mongoose Error: ", err);
+// });
 
-db.once("open", function() {
-  console.log("Mongoose connection successful.");
-});
+// db.once("open", function() {
+//   console.log("Mongoose connection successful.");
+// });
 
 
 
@@ -192,6 +191,90 @@ db.once("open", function() {
 // app.get("*", function(req, res) {
 //   res.sendFile(__dirname + "/view/public/index.html");
 // });
+
+app.get('/api/mentor-connection/mentors', (req, res) => {
+  let mentors = [
+  {
+    id: 001,
+    name: "Jason Harding",
+    languages: "Javascript, C#, ReactJS",
+    city: "Charlotte",
+    state: "NC",
+    email: "jharding@email.com",
+    image: "http://i1044.photobucket.com/albums/b447/janetwalker271989/christoph_zpstzaxxjh2.jpg"
+  },
+  {
+    id: 002,
+    name: "Christine Jenkins",
+    languages: "Javascript, HTML, CSS",
+    city: "Atlanta",
+    state: "GA",
+    email: "christinerocks@email.com",
+    image: "http://i1044.photobucket.com/albums/b447/janetwalker271989/janna_zpsxfiva1sf.jpg"
+  },
+  {
+    id: 003,
+    name: "Steve Crimson",
+    languages: "Angular, NodeJS",
+    city: "New York",
+    state: "NY",
+    email: "crimsonsteve@email.com",
+    image: "http://i1044.photobucket.com/albums/b447/janetwalker271989/steve_zpsojhym9zt.jpg"
+  },
+  {
+    id: 004,
+    name: "Akeeva Johnson",
+    languages: "Javascript, ReactJS",
+    city: "Jacksonville",
+    state: "FL",
+    email: "akeevava@email.com",
+    image: "http://i1044.photobucket.com/albums/b447/janetwalker271989/ryanne_zpsgwxkuegz.jpg"
+  }
+  ];
+  res.json(mentors);
+})
+
+app.get('/api/mentor-connection/mentees', (req,res) => {
+  let mentees = [
+  {
+    id: 100,
+    name: "Dwayne Gibson",
+    languages: "Javascript, C#, ReactJS",
+    city: "Charlotte",
+    state: "NC",
+    email: "jharding@email.com",
+    image: "http://i1044.photobucket.com/albums/b447/janetwalker271989/kevin_zpsml7qxtxo.jpg"
+  },
+  {
+    id: 200,
+    name: "Helen Gibbs",
+    languages: "Javascript, HTML, CSS",
+    city: "Atlanta",
+    state: "GA",
+    email: "helengibbs@email.com",
+    image: "http://i1044.photobucket.com/albums/b447/janetwalker271989/helen_zpsdc6kmacp.jpg"
+  },
+  {
+    id: 300,
+    name: "Lucas Hawkins",
+    languages: "HTML, CSS",
+    city: "New York",
+    state: "NY",
+    email: "lucasskywalker@email.com",
+    image: "http://i1044.photobucket.com/albums/b447/janetwalker271989/lucas_zps8nk9mtzz.jpg"
+  },
+  {
+    id: 400,
+    name: "Akeeva Johnson",
+    languages: "Javascript, ReactJS",
+    city: "Jacksonville",
+    state: "FL",
+    email: "akeevava@email.com",
+    image: "http://i1044.photobucket.com/albums/b447/janetwalker271989/ryanne_zpsgwxkuegz.jpg"
+  }
+  ];
+  res.json(proTipMaster);
+})
 
 app.listen(PORT, function() {
   console.log("App listening on PORT: " + PORT);

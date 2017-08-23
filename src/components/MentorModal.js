@@ -10,6 +10,10 @@ import NodeQuiz from '../quizzes/tornode';
 import CSharpQuiz from '../quizzes/torc';
 import MongoQuiz from '../quizzes/tormongo';
 
+import '../../public/css/mentorConnection.css';
+import '../../public/css/bootstrap.css';
+import '../../public/font-awesome/css/font-awesome.min.css';
+
 class MentorModal extends React.Component {      
     constructor(props)  {
         super(props);
@@ -55,13 +59,13 @@ class MentorModal extends React.Component {
             <div>
                 Choices
                 <br/>
-                <button onClick={this.chooseNode}>
+                <button className="btn btn-dark" onClick={this.chooseNode}>
                     Node
                 </button>
-                <button>
+                <button className="btn btn-dark">
                     Mongo
                 </button>
-                <button>
+                <button className="btn btn-dark">
                     C#
                 </button>
             </div>                     
@@ -104,7 +108,7 @@ class MentorModal extends React.Component {
                 {/* isThisValueTrue ? ifYesDoThis : OtherwiseDoThis */}
                 {/* if this.props.isAuth, render quiz, otherwise unAuth */}
                 {this.state.showQuiz ? quiz : choices}
-                <button onClick={this.props.close}>Back</button>
+                <button className="btn btn-dark" onClick={this.props.close}>Back</button>
             </Modal>
 
             

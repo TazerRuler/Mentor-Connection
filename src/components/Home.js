@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import '../../public/css/bootstrap.css';
+import '../../public/css/mentorConnection.css';
 //import {NavBar, Nav, NavItem} from 'react-bootstrap';
 
 class Home extends Component {

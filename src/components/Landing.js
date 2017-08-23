@@ -14,6 +14,10 @@ import {Grid, Row, Col} from 'react-bootstrap';
 import MenteeModal from './MenteeModal';
 import MentorModal from './MentorModal';
 import UserAuth from './UserAuth';
+import MentorProfile from './MentorProfile';
+import header from './header';
+
+
 
 class Landing extends React.Component {
     constructor(props) {
@@ -35,14 +39,21 @@ class Landing extends React.Component {
         return (
             <div>
 
-                <header id="top" className="header">
-                    <div className="text-vertical-center">
+            <header />
+            <div id="top" className="header">
+                    <div className="text-center">
                         <br/>
                         <img src={Mentor} className="img-style" alt={"Mentor"} />
-                       <button className="mentor-img-left" onClick={this.toggleModal} />
-                       <button className="mentor-img-right" onClick={this.toggleModal} />
                     </div>
-                </header>
+                    <div className="text-center col-sm-6">
+                        <button className="btn-dark btn-lg text-center" onClick={this.toggleModal}>Become A Mentor!</button>
+                    </div>
+                    <div className="text-center col-sm-6">
+                        <button className="btn-dark btn-lg text-center" onClick={this.toggleModal}>Become A Mentee!</button>
+                    </div>
+                </div>
+
+                
 
                 <section id="about" className="about">
                     <div className="container">
@@ -184,7 +195,7 @@ class Landing extends React.Component {
                     isAutth={this.props.isAuthenticated} />
 
                
-
+                <MentorProfile />
             </div>
         );
     }

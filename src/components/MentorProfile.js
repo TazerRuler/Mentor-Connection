@@ -1,13 +1,12 @@
 import React from 'react';
-import {Link} from "react-router-dom"; 
 import '../../public/css/bootstrap.css';
 import '../../public/css/mentorConnection.css';
 
-import Navbar from './common/Navbar';
 import Mentor1 from "../../public/images/mentor1.jpg";
 import Avatar1 from "../../public/images/avatar1.jpg";
 import InfiniteCalendar from 'react-infinite-calendar';
 import 'react-infinite-calendar/styles.css'; // only needs to be imported once
+import { getMentorData } from '../utils/menteeAPI'
 
 
 // Render the Calendar
@@ -35,14 +34,31 @@ const styles = {
     fontSize: 30
 }
 };
+
 class MentorProfile extends React.Component {
+	constructor() {
+		super()
+		this.state = { names: [] };
+	}
+
+	getMentorData() {
+		getMentorData().then((names) => {
+			this.setState({ names });
+			});
+	}
+
+	componentDidMount() {
+		this.getMentorData();
+	}
+
 
   	render() {
-    	return (
+
+  		const { names } = this.state;
+
+    	return ( 
 
 	      	<div>
-
-	      	<Navbar />
 
 	      		<div className="container">
 	      			<div className="row text-center">
@@ -52,7 +68,7 @@ class MentorProfile extends React.Component {
 						      	<div>
 						          <img src={Mentor1} className="img-thumbnail img-responsive" alt="mentor" />
 						          <h1>Welcome Back User</h1>
-						          <Link to="/mentor-form">edit profile</Link>
+						          
 						        </div>
 
 						    </div>
