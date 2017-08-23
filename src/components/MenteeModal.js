@@ -3,7 +3,7 @@ import Modal from 'react-modal';
 import Auth0Lock from 'auth0-lock';
 import {Grid, Row, Col} from 'react-bootstrap';
 import Header from './header';
-import Home from './home';
+import Home from './Home';
 import '../../public/css/mentorConnection.css';
 import '../../public/css/bootstrap.css';
 import '../../public/font-awesome/css/font-awesome.min.css';
