@@ -4,7 +4,7 @@ import Modal from 'react-modal';
 import Auth0Lock from 'auth0-lock';
 import {Grid, Row, Col} from 'react-bootstrap';
 import Header from './header';
-import Home from './home';
+import Home from './Home';
 
 import NodeQuiz from '../quizzes/tornode';
 import CSharpQuiz from '../quizzes/torc';
