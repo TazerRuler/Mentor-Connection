@@ -1,4 +1,4 @@
- import React from 'react';
+import React from 'react';
 
 class CSharpQuiz extends React.Component {
     constructor(props)  {
@@ -146,10 +146,9 @@ class CSharpQuiz extends React.Component {
             );
         } else {
             return (
-                <div>You scored {this.state.totalScore}.
-                    <br/>
-                    <button onClick={this.finishQuiz}>Okay</button>
-                </div>
+              <div>
+                  You scored {this.state.totalScore}.
+              </div>
             );
         }
     }  
